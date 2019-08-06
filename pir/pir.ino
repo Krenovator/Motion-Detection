@@ -36,7 +36,7 @@ void setup() {
   // PIR Motion Sensor mode INPUT_PULLUP
   pinMode(pirSensor, INPUT_PULLUP);
   // Set pirSensor pin as interrupt, assign interrupt function and set RISING mode
-  attachInterrupt(digitalPinToInterrupt(pirSensor), detectsMovement, RISING);
+  ICACHE_RAM_ATTR attachInterrupt(digitalPinToInterrupt(pirSensor), detectsMovement, RISING);
 }
 
 void loop() {
